@@ -11,7 +11,7 @@ test:
         - grunt test
 
 deployment:
-prod:
-    branch: master
-    heroku:
-        appname: einar-build-and-deploy
+    prod:
+        branch: master
+        heroku:
+            appname: einar-build-and-deploy
