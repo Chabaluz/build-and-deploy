@@ -127,6 +127,17 @@ describe('the calculation controller', function () {
       });
     });
 
+    describe('multiply operator', function () {
+        var operator = 'multiply';
+
+        it('should calculate 1 * 1 = 1', function () {
+            var ctrl = createController();
+            ctrl.calculate(1, 1, operator);
+
+            expect(ctrl.result).toBe(1);
+        });
+    });
+
     describe('divide operator', function () {
       var operator = 'divide';
 
