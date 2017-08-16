@@ -11,6 +11,10 @@ module.exports = function (grunt) {
     }
   };
 
+    var jsHintConfig = {
+        all: ['src/calcApp.module.js', 'src/calcCtrl.js'],
+    };
+
   var concatConfig = {
     default: {
       files: {
@@ -90,9 +94,14 @@ module.exports = function (grunt) {
     cssmin: cssminConfig,
     connect: connectConfig,
     karma: karmaConfig,
+    jshint: jsHintConfig,
   };
 
   grunt.initConfig(gruntConfig);
+
+    grunt.registerTask('lint', [
+        'jshint:all'
+    ]);
 
   grunt.registerTask('build', [
     'sass',
